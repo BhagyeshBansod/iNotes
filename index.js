@@ -12,7 +12,7 @@ const port = process.env.PORT;
 
 connectDB();
 app.use(cors({
-  origin: ["http://localhost:3000/", "https://inotes.onrender.com"]
+  origin: ["http://localhost:3000/", "https://inotes-t5ed.onrender.com"]
 }));
 app.use(Express.json());
 app.use("/api/auth", authRouter);

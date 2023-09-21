@@ -11,7 +11,9 @@ const app = Express();
 const port = process.env.PORT;
 
 connectDB();
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000/", "https://inotes.onrender.com"]
+}));
 app.use(Express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/notes", noteRouter);
